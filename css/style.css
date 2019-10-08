@@ -146,13 +146,6 @@ body
     width: 100%;
 }
 
-.icons .fa
-{
-    font-size: 35px;
-    margin-right: 7px;
-    
-}
-
 
 .cta-div
 {
@@ -213,7 +206,7 @@ body
     
 }
 
-.social-networks a.fa
+.social-networks a.fab
 {
     border: 1px solid white;
     padding: 10px;
@@ -844,7 +837,7 @@ h4.team-member-designation
 }
  
 
-.news-content .fa
+.news-content .fab
 {
     padding: 10px 10px;
     cursor: pointer;
@@ -852,33 +845,29 @@ h4.team-member-designation
 }
 
 
-.news-content .fa-facebook
+.news-content .fab-facebook
 {
     color: #3b5995;    
     
 }
 
-.news-content .fa-twitter
+.news-content .fab-twitter
 {
     color: #0084b4;    
     
 }
 
-.news-content .fa-linkedin
+.news-content .fab-linkedin
 {
     color: #0077b5;    
     
 }
 
 
+
 .news-content .fa-youtube
 {
     color: red;    
-    
-}
-.news-content .fa-whatsapp
-{
-    color: #34af23;    
     
 }
 
