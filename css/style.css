@@ -723,11 +723,11 @@ h4.team-member-designation
     -webkit-box-shadow: 0px 0px 0px  20px rgba(0,167,221,0.5);
     -moz-box-shadow: 0px 0px 0px  20px rgba(0,167,221,0.5);
     -o-box-shadow: 0px 0px 0px  20px rgba(0,167,221,0.5);
-    transition: all .4s ease-in
-    -webkit-transition: all .4s ease-in
-    -moz-transition: all .4s ease-in
-    -o-transition: all .4s ease-in
-    -ms-transition: all .4s ease-in
+    transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
  
 }
 
@@ -896,47 +896,6 @@ h4.team-member-designation
 
 
 /*=======================================
-        Counter stat style starts
-=========================================*/
-
-
-.stat
-{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),url(..//img/cover-bg-1.jpg);
-    background-position: center;
-    padding-top: 180px;
-    padding-bottom: 200px;
-    color: white;
-    background-attachment: fixed;
-    margin-top: 100px;
-    
-}
-
-
-.stat i
-{
-    font-size: 85px;
-}
- 
-
-
-.stat-items h2
-{
-    font-weight: bolder;
-    font-size: 42px;
-    color: deepskyblue;
-}
-
-
-
-.stat p
-{
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-
-/*=======================================
         Counter stat style Ends
 =========================================*/
 
@@ -990,7 +949,7 @@ h4.team-member-designation
     
 }
 
-.contact-infos .fa
+.contact-infos .fas
 {
     color: white;
     font-size: 26px;
