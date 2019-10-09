@@ -66,7 +66,7 @@ body
 
 .navbar ul li a:hover, .navbar ul li a:focus
 {
-    color: deepskyblue !important;
+    color: #00629b !important;
     background: none !important;
 }
 
@@ -84,7 +84,7 @@ body
 }
 .navbar-toggle:hover
 {
-    background-color: deepskyblue !important;
+    background-color: #00629b !important;
 }
 
  
@@ -175,8 +175,8 @@ body
 {
     text-decoration: none;
     color: white;
-    background-color: deepskyblue;
-    border-color: deepskyblue;
+    background-color: #00629b;
+    border-color: #00629b;
     
 }
 
@@ -201,8 +201,8 @@ body
 {
     text-decoration: none;
     color: white;
-    background-color: orangered;
-    border-color: orangered;
+    background-color: #00629b;
+    border-color: #00629b;
     
 }
 
@@ -223,9 +223,9 @@ body
 .social-networks a.fa:hover
 {
     text-decoration: none;
-    background-color: deepskyblue;
+    background-color: #00629b;
     color: white;
-    border: 1px solid deepskyblue;
+    border: 1px solid #00629b;
     
 }
 
@@ -240,7 +240,7 @@ body
 
 .primary
 {
-    color: orangered;
+    color: #00629B;
 }
 
 .typed-cursor
@@ -505,7 +505,7 @@ h4.team-member-name
 
 h4.team-member-designation
 {
-    color: #34c6d3;
+    color: #00629b;
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -865,9 +865,9 @@ h4.team-member-designation
 
 
 
-.news-content .fa-youtube
+.news-content .fab-youtube
 {
-    color: red;    
+    color: #0084b4;    
     
 }
 
@@ -982,12 +982,6 @@ h4.team-member-designation
 {
     margin-top: 20px;
 }
-
-
-/*=======================================
-        Map area style Ends
-=========================================*/
-
 
 /*=======================================
         Footer area style starts

@@ -8,7 +8,7 @@
     });
   
      $(".text").typed({
-        strings:["<strong>we love</strong><strong class='primary'> coding</strong>","<strong>and to</strong><strong class='primary'> help !!</strong>"],
+        strings:["<strong>we love</strong><strong class='primary'> coding</strong>","<strong>and to</strong><strong class='primary'> help!!</strong>"],
          typespeed:0,
          loop:true
          
