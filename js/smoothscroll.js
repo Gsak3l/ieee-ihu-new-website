@@ -5,7 +5,7 @@
  * Licensed MIT
  */
 
-(function(factory) {
+(function (factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define(['jquery'], factory);
@@ -16,7 +16,7 @@
     // Browser globals
     factory(jQuery);
   }
-}(function($) {
+}(function ($) {
 
   var version = '2.2.0';
   var optionOverrides = {};
@@ -44,11 +44,11 @@
 
     // fn(opts) function to be called before scrolling occurs.
     // `this` is the element(s) being scrolled
-    beforeScroll: function() {},
+    beforeScroll: function () {},
 
     // fn(opts) function to be called after scrolling occurs.
     // `this` is the triggering element
-    afterScroll: function() {},
+    afterScroll: function () {},
 
     // easing name. jQuery comes with "swing" and "linear." For others, you'll need an easing plugin
     // from jQuery UI or elsewhere
@@ -66,12 +66,12 @@
     preventDefault: true
   };
 
-  var getScrollable = function(opts) {
+  var getScrollable = function (opts) {
     var scrollable = [];
     var scrolled = false;
     var dir = opts.dir && opts.dir === 'left' ? 'scrollLeft' : 'scrollTop';
 
-    this.each(function() {
+    this.each(function () {
       var el = $(this);
 
       if (this === document || this === window) {
@@ -100,7 +100,7 @@
     });
 
     if (!scrollable.length) {
-      this.each(function() {
+      this.each(function () {
         // If no scrollable elements and <html> has scroll-behavior:smooth because
         // "When this property is specified on the root element, it applies to the viewport instead."
         // and "The scroll-behavior property of the … body element is *not* propagated to the viewport."
@@ -130,18 +130,23 @@
   var rRelative = /^([\-\+]=)(\d+)/;
 
   $.fn.extend({
-    scrollable: function(dir) {
-      var scrl = getScrollable.call(this, {dir: dir});
+    scrollable: function (dir) {
+      var scrl = getScrollable.call(this, {
+        dir: dir
+      });
 
       return this.pushStack(scrl);
     },
-    firstScrollable: function(dir) {
-      var scrl = getScrollable.call(this, {el: 'first', dir: dir});
+    firstScrollable: function (dir) {
+      var scrl = getScrollable.call(this, {
+        el: 'first',
+        dir: dir
+      });
 
       return this.pushStack(scrl);
     },
 
-    smoothScroll: function(options, extra) {
+    smoothScroll: function (options, extra) {
       options = options || {};
 
       if (options === 'options') {
@@ -149,7 +154,7 @@
           return this.first().data('ssOpts');
         }
 
-        return this.each(function() {
+        return this.each(function () {
           var $this = $(this);
           var opts = $.extend($this.data('ssOpts') || {}, extra);
 
@@ -159,8 +164,8 @@
 
       var opts = $.extend({}, $.fn.smoothScroll.defaults, options);
 
-      var clickHandler = function(event) {
-        var escapeSelector = function(str) {
+      var clickHandler = function (event) {
+        var escapeSelector = function (str) {
           return str.replace(/(:|\.|\/)/g, '\\$1');
         };
 
@@ -215,20 +220,22 @@
 
       if (options.delegateSelector !== null) {
         this
-        .off('click.smoothscroll', options.delegateSelector)
-        .on('click.smoothscroll', options.delegateSelector, clickHandler);
+          .off('click.smoothscroll', options.delegateSelector)
+          .on('click.smoothscroll', options.delegateSelector, clickHandler);
       } else {
         this
-        .off('click.smoothscroll')
-        .on('click.smoothscroll', clickHandler);
+          .off('click.smoothscroll')
+          .on('click.smoothscroll', clickHandler);
       }
 
       return this;
     }
   });
 
-  var getExplicitOffset = function(val) {
-    var explicit = {relative: ''};
+  var getExplicitOffset = function (val) {
+    var explicit = {
+      relative: ''
+    };
     var parts = typeof val === 'string' && rRelative.exec(val);
 
     if (typeof val === 'number') {
@@ -241,14 +248,16 @@
     return explicit;
   };
 
-  var onAfterScroll = function(opts) {
+  var onAfterScroll = function (opts) {
     var $tgt = $(opts.scrollTarget);
 
     if (opts.autoFocus && $tgt.length) {
       $tgt[0].focus();
 
       if (!$tgt.is(document.activeElement)) {
-        $tgt.prop({tabIndex: -1});
+        $tgt.prop({
+          tabIndex: -1
+        });
         $tgt[0].focus();
       }
     }
@@ -256,7 +265,7 @@
     opts.afterScroll.call(opts.link, opts);
   };
 
-  $.smoothScroll = function(options, px) {
+  $.smoothScroll = function (options, px) {
     if (options === 'options' && typeof px === 'object') {
       return $.extend(optionOverrides, px);
     }
@@ -270,9 +279,13 @@
     var aniOpts = {};
 
     if (explicitOffset.px) {
-      opts = $.extend({link: null}, $.fn.smoothScroll.defaults, optionOverrides);
+      opts = $.extend({
+        link: null
+      }, $.fn.smoothScroll.defaults, optionOverrides);
     } else {
-      opts = $.extend({link: null}, $.fn.smoothScroll.defaults, options || {}, optionOverrides);
+      opts = $.extend({
+        link: null
+      }, $.fn.smoothScroll.defaults, options || {}, optionOverrides);
 
       if (opts.scrollElement) {
         offPos = 'position';
@@ -325,7 +338,7 @@
     aniOpts = {
       duration: speed,
       easing: opts.easing,
-      complete: function() {
+      complete: function () {
         onAfterScroll(opts);
       }
     };
@@ -342,7 +355,7 @@
   };
 
   $.smoothScroll.version = version;
-  $.smoothScroll.filterPath = function(string) {
+  $.smoothScroll.filterPath = function (string) {
     string = string || '';
 
     return string
