@@ -77,5 +77,7 @@
    new WOW().init();
 
  });
- //placeholder for commit
- //0.0
+function eventChanger()
+{
+  console.log("i ma here");
+}
