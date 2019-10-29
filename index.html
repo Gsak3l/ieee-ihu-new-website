@@ -994,7 +994,7 @@
                  </div><br><br><br><br>
                  <div class="row wow fadeInUp">
                      <div class="col-md-8 col-md-offset-2">
-                         <form id="contact-form" class="contact-form">
+                         <form id="contact-form" class="contact-form" onsubmit="return sendMail(this);" method="POST">
                              <div class="row">
                                  <div class="col-md-6"><input id="name" type="text" class="form-control" name="name"
                                          placeholder="Name" required></div>
@@ -1130,6 +1130,7 @@
                  }
              });
          </script>
+         <script src="./js/sendEmail.js"></script>
  </body>
 
  </html>
