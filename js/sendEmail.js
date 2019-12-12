@@ -1,4 +1,4 @@
-function sendMail(contactForm){
+function sendMail(contactForm) {
     console.log(contactForm.name.value);
     console.log(contactForm.Email.value);
     console.log(contactForm.Message.value);
