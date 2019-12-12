@@ -945,3 +945,9 @@ h4.team-member-designation {
     margin-top: 20px;
 
 }
+/*question mark image remover for phones*/
+@media(max-width:991px) {
+  img#questionmarkImage {
+    display: none;
+  }
+}
