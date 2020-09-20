@@ -2,7 +2,7 @@
  <html>
 
  <head>
-     <title>IEEE-Internatioanl Hellenic University</title>
+     <title>IEEE-Internatioanl Hellenic University-Thessaloniki</title>
      <link href="css/style.css" rel="stylesheet">
      <link rel="shortcut icon" href="img/favicon.ico">
 
@@ -63,17 +63,19 @@
                      </button>
                      <a href="" class="navbar-brand" style="margin-top: -38px;"><img src="./img/ieeeihulogo.png"
                              style="height: 80px; width:80px;" alt=""></a>
-                     <a href="" class="navbar-brand">IEEE IHU</a>
+                     <a href="" class="navbar-brand">IEEE IHU THESS</a>
                  </div>
                  <div class="collapse navbar-collapse" id="navi">
                      <!---------Navigation menus------------>
-                     <ul class="nav navbar-nav navbar-right  ">
+                     <ul id="nav-menu" class="nav navbar-nav navbar-right">
                          <li><a href="#slider" class="smooth-scroll">Home</a></li>
                          <li><a href="#work" class="smooth-scroll">Our Work</a></li>
                          <li><a href="#team" class="smooth-scroll">Team</a></li>
                          <li><a href="#faqs" class="smooth-scroll">General questions</a></li>
                          <li><a href="#upcoming" class="smooth-scroll">Recent Posts</a></li>
                          <li><a href="#contact_area" class="smooth-scroll">Contact Us</a></li>
+                         <li><img src="./img/greek_flag.png" style="height: 40px; cursor: pointer;
+                            margin-left: 10px;" onclick="changeLanguage()"></li>
                      </ul>
                      <!---------Navigation menus Ends------------>
                  </div>
@@ -86,9 +88,9 @@
              <div class="slider-overlay">
                  <div class="slider-content">
                      <div class="text"></div>
-                     <div class="cta-div">
-                         <a href="#contact_area" class="btn1">CONTACT US!</a>
-                         <a href="#faqs" class="btn2">LEARN TODAY !</a>
+                     <div class="cta-div" id="conmore">
+                         <a href="#contact_area" class="btn1">CONTACT US</a>
+                         <a href="#faqs" class="btn2">LEARN TODAY</a>
                      </div>
                      <br><br>
                      <div class="social-networks">
@@ -111,10 +113,10 @@
              <div class="container">
                  <div class="row">
                      <div class="col-xs-12">
-                         <div class="section-title text-center wow zoomIn" data-wow-duration=".5s" data-wow-delay=".5s">
-                             <h2><b>WHO WE ARE</b></h2>
-                             <p>
-                                 IEEE stands for<br>
+                         <div id="whoweare" class="section-title text-center wow zoomIn" data-wow-duration=".5s"
+                             data-wow-delay=".5s">
+                             <h2 style="font-weight: bold;">WHO WE ARE</h2>
+                             <p style="font-size: 18px;">
                              </p>
                          </div>
                      </div>
@@ -295,12 +297,12 @@
          <section class="teams" id="team">
              <div class="container text-center wow zoomIn" data-wow-duration="1s" data-wow-delay="1s">
                  <h2><b>MEMBERS</b></h2>
-                 <p>
+                 <h4>
                      Complete list of the members<br>
                      of our IEEE SB
-                 </p>
+                 </h4>
              </div><br><br> <br>
-             <div class="container wow bounceInLeft" data-wow-duration="1.2s" data-wow-delay="1.2s">
+             <div class="container wow bounceInLeft" data-wow-duration="1.2s" data-wow-delay="1.2s" id="membersm">
                  <div class="row">
                      <div class="col-md-12">
                          <div id="team-members" class="owl-carousel owl-theme">
@@ -421,12 +423,11 @@
 
                              <!--TSAKIRIS-->
                              <div class="team-member">
-                                 <img src="img/pikachu.png" alt="" class="img-responsive">
+                                 <img src="img/pikachu.jpg" alt="" class="img-responsive">
                                  <div class="team-member-info text-center">
                                      <h4 class="team-member-name">Tsakiris Nikos</h4>
                                      <h4 class="team-member-designation">Program Committee, Membership Committee</h4>
                                      <ul class="social-list">
-                                         <h4>I GOT NOTHING</h4>
                                      </ul>
                                  </div>
                              </div>
@@ -822,7 +823,7 @@
                              <div class="team-member">
                                  <img src="img/thodoris.jpg" alt="" class="img-responsive">
                                  <div class="team-member-info text-center">
-                                     <h4 class="team-member-name">Karipidis Theodor</h4>
+                                     <h4 class="team-member-name">Karipidis Thodoris</h4>
                                      <h4 class="team-member-designation">Member</h4>
                                      <ul class="social-list">
                                          <li><a href="https://www.facebook.com/teokaripidis18"
@@ -922,11 +923,10 @@
                      <div class="col-md-12 text-center wow zoomIn" data-wow-duration=".4s" data-wow-delay=".4s">
                          <h2><b>GENERAL FAQs</b></h2>
                          <div class="sub-heading">
-                             <p>
-                                 Most common questions about ieee<br>
-                                 and more specifically about our sb
-                             </p>
-
+                             <h4>
+                                 Most common questions about IEEE<br>
+                                 and more specifically about our SB
+                             </h4>
                          </div>
                      </div>
 
@@ -938,29 +938,27 @@
                          <div class="panel-group" id="accordian">
 
                              <div class="panel panel-default">
-                                 <div class="panel-heading" id="headingOne">
+                                 <div class="panel-heading" id="headingTwo">
                                      <h4 class="panel-title">
-                                         <a href="#collapseOne" data-toggle="collapse" data-parent="#accordian">
-                                             What is IEEE
+                                         <a href="#collapseOne" class="collapsed" data-toggle="collapse"
+                                             data-parent="#accordian">
+                                             What is IEEE?
                                          </a>
                                      </h4>
                                  </div>
-                                 <div id="collapseOne" class="panel-collapse collapse in" aria-labelledby="headingone">
+                                 <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="headingTwo">
                                      <div class="panel-body">
                                          <p>
-                                             <!--this has to be changed to english-->
-                                             Η ΙΕΕΕ (Institute of Electrical and Electronic Engineers) είναι μια
-                                             παγκόσμια τεχνολογική,
-                                             επαγγελματική, μη πολιτική οργάνωση με σκοπό την προώθηση της θεωρίας και
-                                             των εφαρμογών της
-                                             επιστήμης του Ηλεκτρολόγου Μηχανικού και Μηχανικού Υπολογιστών για την
-                                             εξέλιξη του
-                                             επαγγέλματος με γνώμονα την κοινωνική προσφορά.<br>
-                                             Στην ΙΕΕΕ είναι σήμερα εγγεγραμμένα περισσότερα από 400.000 μέλη εκ των
-                                             οποίων περισσότεροι
-                                             από 90.000 φοιτητές, σε περισσότερες από 160 χώρες, γεγονός που την καθιστά
-                                             τη μεγαλύτερη
-                                             τεχνολογική επαγγελματική κοινότητα στον κόσμο.
+                                             The IEEE (Institute of Electrical and Electronic Engineers) is a global
+                                             technological, professional,
+                                             non-political organization with the goal of promoting the theory and
+                                             applications of the science of
+                                             Electrical and Computer Engineering for the development of the profession
+                                             based on social contribution. <br>
+                                             IEEE currently has more than 400,000 members, of which more than 90,000 are
+                                             students in more than 160
+                                             countries, making it the largest technology professional community in the
+                                             world.
                                          </p>
                                      </div>
                                  </div>
@@ -971,23 +969,20 @@
                                      <h4 class="panel-title">
                                          <a href="#collapseTwo" class="collapsed" data-toggle="collapse"
                                              data-parent="#accordian">
-                                             Οι φοιτητές στην ΙΕΕΕ
+                                             Students in IEEE
                                          </a>
                                      </h4>
                                  </div>
                                  <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingTwo">
                                      <div class="panel-body">
                                          <p>
-                                             <!--this has to be changed to english-->
-                                             Οι φοιτητές παίζουν καθοριστικό ρόλο για την IEEE. Σήμερα υπάρχουν
-                                             περισσότερες από
-                                             2000 φοιτητικές ομάδες της ΙΕΕΕ στον κόσμο. Σκοπός τους είναι να παρέχουν
-                                             στους
-                                             προπτυχιακούς και μεταπτυχιακούς φοιτητές, που ενδιαφέρονται για την
-                                             επιστήμη του Ηλεκτρολόγου
-                                             Μηχανικού, Μηχανικού Υπολογιστών ή συγγενείς επιστήμες, ευκαιρίες για
-                                             ακαδημαϊκή, τεχνολογική και
-                                             επαγγελματική εξέλιξη.
+                                             Students play a key role in the IEEE. Today there are more than 2000 IEEE
+                                             student groups in the world. <br>
+                                             Their purpose is to provide undergraduate and postgraduate students
+                                             interested in the
+                                             science of Electrical Engineering, Computer Engineering or related sciences
+                                             with opportunities
+                                             for academic, technological and professional development.
                                          </p>
                                      </div>
                                  </div>
@@ -998,8 +993,7 @@
                                      <h4 class="panel-title">
                                          <a href="#collapseThree" class="collapsed" data-toggle="collapse"
                                              data-parent="#accordian">
-                                             <!--this has to be changed to english-->
-                                             Δραστηριότητες από φοιτητικές ομάδες
+                                             Activities from our Student Branch
                                          </a>
                                      </h4>
                                  </div>
@@ -1007,35 +1001,26 @@
                                      <div class="panel-body">
                                          <ul>
                                              <li>
-                                                 <!--this has to be changed to english-->
-                                                 Διοργάνωση σεμιναρίων, συνεδρίων (workshops) και ομιλιών από
-                                                 διακεκριμένους
-                                                 επιστήμονες με σκοπό την επιμόρφωση και ενημέρωση των φοιτητών γύρω από
-                                                 θέματα που αφορούν την επιστήμη των Ηλεκτρολόγων Μηχανικών, Μηχανικών
-                                                 Υπολογιστών ή παρεμφερείς επιστήμες.
+                                                 Organizing seminars, conferences (workshops) and lectures by
+                                                 distinguished scientists in order to educate and inform students about
+                                                 topics related to the science of Electrical Engineering, Computer
+                                                 Engineering or similar sciences.
                                              </li>
                                              <li>
-                                                 <!--this has to be changed to english-->
-                                                 Διοργάνωση εκπαιδευτικών εκδρομών και επισκέψεων σε εταιρείες και
-                                                 ιδρύματα
-                                                 που ασχολούνται με την έρευνα και την ανάπτυξη συγγενών επιστημονικών
-                                                 πεδίων.
+                                                 Organizing educational trips and visits to companies and
+                                                 institutions engaged in the research and development of related
+                                                 sciences fields.
                                              </li>
                                              <li>
-                                                 <!--this has to be changed to english-->
-                                                 Συμμετοχή σε φοιτητικούς διαγωνισμούς υπό την αιγίδα της ΙΕΕΕ ή άλλων
-                                                 τεχνολογικών
-                                                 οργανισμών.
+                                                 Participation in student competitions under the auspices of IEEE or
+                                                 others technological organizations.
                                              </li>
                                              <li>
-                                                 <!--this has to be changed to english-->
-                                                 Ενημέρωση των φοιτητών σχετικά με τις δραστηριότητες της ΙΕΕΕ και τις
-                                                 δυνατότητες που
-                                                 τους παρέχονται από την οργάνωση.
+                                                 Informing students about the activities of IEEE and
+                                                 opportunities provided to them by the organization.
                                              </li>
                                              <li>
-                                                 <!--this has to be changed to english-->
-                                                 Διοργάνωση διαγωνισμών και βραβείων με σκοπό την διάκριση της.
+                                                 Organizing competitions and awards in order to distinguish it.
                                              </li>
                                          </ul>
                                      </div>
@@ -1047,26 +1032,21 @@
                                      <h4 class="panel-title">
                                          <a href="#collapsefour" class="collapsed" data-toggle="collapse"
                                              data-parent="#accordian">
-                                             <!--this has to be changed to english-->
-                                             Γιατί να γίνεις μέλος στην IEEE
+                                             Why you Should Join Now
                                          </a>
                                      </h4>
                                  </div>
                                  <div id="collapsefour" class="panel-collapse collapse" aria-labelledby="headingfour">
                                      <div class="panel-body">
                                          <p>
-                                             <!--this has to be changed to english-->
-                                             Η εγγραφή ενός φοιτητή ως μέλος της ΙΕΕΕ του παρέχει όλα τα προνόμια ενός
-                                             κανονικού
-                                             μέλους με το συγκριτικό πλεονέκτημα της πολύ μικρότερης συνδρομής. Η ΙΕΕΕ
-                                             μέσω των
-                                             πρωτοποριακών θεμάτων που πραγματεύεται και τη συμμετοχή σε διάφορες
-                                             επαγγελματικές
-                                             δραστηριότητες, συνέδρια κ.ά., σου δίνει τη δυνατότητα να είσαι ενήμερος
-                                             της προόδου
-                                             της τεχνολογίας και του κλάδου σου, των τελευταίων τάσεων της βιομηχανίας
-                                             και – το πιο σημαντικό –
-                                             σε βοηθάει τελικά στην καριέρα σου.
+                                             The registration of a student as a member of the IEEE gives you access to
+                                             all the
+                                             privileges of one normal member with the comparative advantage of much
+                                             smaller subscription. The IEEE through the pioneering issues and
+                                             involvement in various professional activities, conferences, etc., gives
+                                             you the opportunity to be informed of progress of your technology and
+                                             industry, the latest industry trends and <b> the most important </b>
+                                             ultimately helps you in your career.
                                          </p>
                                      </div>
                                  </div>
@@ -1078,76 +1058,47 @@
                                          <a href="#collapsefive" class="collapsed" data-toggle="collapse"
                                              data-parent="#accordian">
                                              <!--this has to be changed to english-->
-                                             Οφέλη μέλους της IEEE
+                                             Benefits of Joining IEEE
                                          </a>
                                      </h4>
                                  </div>
                                  <div id="collapsefive" class="panel-collapse collapse" aria-labelledby="headingfour">
                                      <div class="panel-body">
                                          <ul>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Λαμβάνεις το βραβευμένο μηνιαίο περιοδικό ΙΕΕΕ Spectrum, το οποίο
-                                                 περιλαμβάνει
-                                                 άρθρα για την κατάσταση του επαγγέλματος, ευκαιρίες για την καριέρα και
-                                                 την
-                                                 εκπαίδευση καθώς και αφιερώματα στις πιο πρόσφατες τεχνολογικές
-                                                 εξελίξεις και τις
-                                                 εφαρμογές τους.
+                                             <li> You receive the award-winning monthly IEEE Spectrum magazine, which
+                                                 includes articles on the state of the profession, career opportunities
+                                                 and the education as well as tributes to the latest technology
+                                                 developments and their applications.
                                              </li>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Έχεις δωρεάν ηλεκτρονική πρόσβαση στο περιοδικό POTENTIALS για φοιτητές
-                                                 και νέους επαγγελματίες.
+                                             <li> You have free online access to the POTENTIALS magazine for students
+                                                 and young professionals.
                                              </li>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Μπορείς να πάρεις μέρος σε φοιτητικούς διαγωνισμούς που διοργανώνει η
-                                                 ΙΕΕΕ (όπως IEEEXtreme,
-                                                 Student Paper Contest κ.ά.) και να διακριθείς σε διεθνές επίπεδο.
+                                             <li> You can take part in student competitions organized by IEEE (such as
+                                                 IEEEXtreme, Student Paper Contest etc.) and to stand out
+                                                 internationally.
                                              </li>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Μπορείς να διεκδικήσεις υποτροφίες για μέλη της ΙΕΕΕ.
+                                             <li> You can apply for scholarships for IEEE members.
                                              </li>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Αποκτάς δωρεάν @ieee.org email alias σε συνεργασία της ΙΕΕΕ με τη
+                                             <li> You get free @ ieee.org email alias in collaboration with IEEE with
                                                  Google.
                                              </li>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Έχεις πρόσβαση σε καταλόγους προσφοράς εργασίας σε ευρωπαϊκό και
-                                                 διεθνές επίπεδο και σε
-                                                 εργαλεία προώθησης της καριέρας σου.
+                                             <li> You have access to job offers lists in European and internationally
+                                                 and in tools to promote your career.
                                              </li>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Μπορείς να συμμετάσχεις σε φοιτητικά συνέδρια και συναντήσεις με άλλα
-                                                 μέλη στην Ελλάδα ή το
-                                                 εξωτερικό με σκοπό να ανταλλάξεις γνώσεις και απόψεις.
+                                             <li> You can participate in student conferences and meetings with others
+                                                 members in Greece or abroad in order to exchange knowledge and views.
                                              </li>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Μπορείς να συμμετάσχεις σε όλα τα διεθνή επιστημονικά συνέδρια που
-                                                 διοργανώνει η ΙΕΕΕ
-                                                 έχοντας ειδικές χαμηλές φοιτητικές τιμές.
+                                             <li> You can participate in all the international scientific conferences
+                                                 that organized by the IEEE having special low student prices.
                                              </li>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Εξοικονομείς χρήματα με σημαντικές εκπτώσεις σε πάνω από 15.000 βιβλία
-                                                 που εκδίδει η ΙΕΕΕ.
+                                             <li> You save money with significant discounts on over 15,000 books issued
+                                                 by the IEEE.
                                              </li>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Λαμβάνεις οικονομική ενίσχυση για μεταφορά σε επιστημονικό συνέδριο στο
-                                                 οποίο έχεις δημοσίευση.
+                                             <li> You receive financial support for transfer to a scientific conference
+                                                 at which you have a post.
                                              </li>
-                                             <li>
-                                                 <!--this has to be changed to english-->
-                                                 Χρησιμοποιείς το εργαλείο IEEE Xplore για εύκολη εύρεση οποιουδήποτε
-                                                 επιστημονικού άρθρου και
-                                                 πρόσβαση σε αυτό αν περιλαμβάνεται στη συνδρομή σου.
+                                             <li> You use the IEEE Xplore tool to easily find anyone scientific article
+                                                 and access it if it is included in your subscription.
                                              </li>
                                          </ul>
                                      </div>
@@ -1157,8 +1108,8 @@
                          </div>
                      </div>
                      <div class="freeimage wow bounceInRight" data-wow-duration=".8s" data-wow-delay=".8s">
-                         <div style="margin-top: 35px;" class="col-md-4 col-md-offset-1">
-                             <img alt="" id="questionmarkImage" src="img/Question_Mark.png">
+                         <div class="col-md-4 col-md-offset-1" style="margin-bottom: 20px;">
+                             <img alt="" id="questionmarkImage" style="width: 100%;" src="img/Question_Mark5.gif">
                          </div>
                      </div>
                  </div>
@@ -1189,15 +1140,16 @@
          <!------------Video Markup Ends------------->
 
          <!------------Blog Markup Starts------------->
+         <br>
          <section class="upcoming-news-area" id="upcoming">
              <div class="container">
                  <div class="row">
                      <div class="col-xs-12">
                          <div class="section-title text-center wow zoomIn" data-wow-duration=".2s" data-wow-delay=".2s">
-                             <h2><b>Upcoming EVENTS</b></h2>
-                             <div class="sub-heading">
-                                 Upcoming events of our sb<br>
-                             </div>
+                             <h2><b>UPCOMING EVENTS</b></h2>
+                             <h4 class="sub-heading">
+                                 Upcoming events of our Student Branch<br>
+                             </h4>
                          </div>
                      </div>
                  </div><br><br>
@@ -1222,13 +1174,11 @@
                                          onclick="javascript:location.href='https://www.youtube.com/channel/UCmzjQYFb33sHrWKVWv-VW0A'"></i>
                                      <h4>Winter School on Internet of Things</h4>
                                      <p id="0">
-                                         <!--this has to be changed to english-->
-                                         Το Ερευνητικό Εργαστήριο Συστημάτων Υπολογιστών, Ασφάλειας και Δικτύων (ΣΥΑΔ)
-                                         του Αλεξάνδρειου ΤΕΙ Θεσσαλονίκης και το IEEE Student Branch at Alexander TEI
-                                         of Thessaloniki συνδιοργανώνουν το Winter School με τίτλο “Internet of Things:
-                                         Security, Communication & Application Challenges” την Παρασκευή 15 και Σάββατο
-                                         16 Δεκεμβρίου (10:00-18:00) στο ΑΤΕΙΘ (Αίθουσα Φίλιππος, κεντρικός
-                                         διάδρομος)...
+                                         The Research Laboratory of Computer Systems, Security and Networks (SYAD) of
+                                         Alexandreio TEI of Thessaloniki and the IEEE Student Branch at Alexander TEI of
+                                         Thessaloniki co-organize the Winter School entitled "Internet of Things:
+                                         Security, Communication & Application Challenges" on Friday 15 and Saturday 16
+                                         December (10: 00-18: 00) at ATEITH (Filippos Hall, main corridor)...
                                      </p><br>
                                      <a onclick="eventChanger(0)" id="btn0" style="cursor:pointer;">Show more...</a>
                                  </div>
@@ -1253,18 +1203,15 @@
                                          onclick="javascript:location.href='https://www.instagram.com/ieee.ihuthess/'"></i>
                                      <i class="fab fa-youtube"
                                          onclick="javascript:location.href='https://www.youtube.com/channel/UCmzjQYFb33sHrWKVWv-VW0A'"></i>
-                                     <!--<i class="fab fa-linkedin"></i>-->
-                                     <!--this has to be changed to english-->
-                                     <h4>5ο meetup για την δημιουργια νεας σελιδας</h4>
+                                     <h4>5th Meetup for the new Website Development</h4>
                                      <p id="1">
-                                         <!--this has to be changed to english-->
-                                         Μέλη του IEEE student branch του ΤΕΙ Θεσσαλονίκης χρησιμοποιούν την ανάγκη
-                                         ανανέωσης της σελίδας του branch, για να έρθουν σε επαφή με το react.js
-                                         framework και το nodejs.
-                                         Θα πρσπαθήσουμε το μεγαλύτερο μέρος της ανάπτυξης να γίνει στα meetups, τα
-                                         οποία θα είναι ανοιχτά για όλους.
-                                         Αυτό το Σάββατο θα γίνει review σε ότι έχουμε κάνει μέχρι τώρα και...
-                                     </p><br>
+                                         Members of the IEEE student branch of the TEI of Thessaloniki use the need to
+                                         update the branch page, to get in touch with the react.js framework and nodejs.
+                                         We will try to make the most of the development in meetups, which will be open
+                                         to everyone. This Saturday there will be a review of what we have done so far
+                                         and...
+                                     </p>
+                                     <br>
                                      <a onclick="eventChanger(1)" id="btn1" style="cursor:pointer;">Show more...</a>
 
                                  </div>
@@ -1291,16 +1238,14 @@
                                          onclick="javascript:location.href='https://www.youtube.com/channel/UCmzjQYFb33sHrWKVWv-VW0A'"></i>
                                      <h4>IEEE DAY 2017</h4>
                                      <p id="2">
-                                         <strong>IEEE DAY 2017</strong><br>
-                                         <!--this has to be changed to english-->
-                                         Ελάτε να γνωριστούμε!<br>
-                                         Την Τετάρτη 11/10 στις 12:15 ( Αίθουσα 109) η ομαδα φοιτητών του παραρτήματος
-                                         της ΙΕΕΕ του ΤΕΙ μας διοργανώνει μια εκδήλωση γνωριμίας και παρουσίασης της
-                                         δράσης του!
-                                         Σας περιμένουμε!<br>
-                                         Αναλυτικά το πρόγραμμα:<br>
-                                         –Παρουσίαση του οργανισμού της ΙΕΕΕ<br>
-                                         –Παρουσίαση του φοιτητικού παραρτήμαρτος...
+                                         <strong>IEEE DAY 2017</strong> <br>
+                                         Let's meet! <br>
+                                         On Wednesday 11/10 at 12:15 (Room 109) the group of students of the branch
+                                         of the IEEE of our TEI organizes an event of acquaintance and presentation
+                                         of action!
+                                         We are waiting for you! <br>
+                                         Detailed program: <br>
+                                         –Presentation of the IEEE organization...
                                      </p><br>
                                      <a onclick="eventChanger(2)" id="btn2" style="cursor:pointer;">Show more...</a>
                                  </div>
@@ -1330,16 +1275,16 @@
                          <form onsubmit="sendMail(this);" method="POST" id="contact-form" class="contact-form">
                              <div class="row">
                                  <div class="col-md-6">
-                                     <input id="name" type="text" class="form-control" name="name" placeholder="Name"
+                                     <input id="name" type="text" class="form-control" name="name" placeholder="Name*"
                                          required>
                                  </div>
                                  <div class="col-md-6">
                                      <input id="email" class="form-control" type="email" name="Email"
-                                         placeholder="Email" required>
+                                         placeholder="Email*" required>
                                  </div>
                                  <div class="col-md-12"><br>
                                      <textarea id="message" rows="5" class="form-control" name="Message"
-                                         placeholder="Message" required></textarea>
+                                         placeholder="Message*" required></textarea>
                                  </div>
                                  <div class="col-md-12 text-center"><br><br>
                                      <button class="btn" type="submit">Submit Message</button>
@@ -1420,7 +1365,7 @@
                          </div> <br>
                          <div class="copyright">
                              <p class="footerlogo">
-                                 &copy; IEEE IHU
+                                 &copy; IEEE International Hellenic University, Thessaloniki Department
                              </p>
                              <div class="bordernow"></div>
                          </div>
@@ -1441,6 +1386,7 @@
          <script src="./js/sendEmail.js"></script>
          <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false">
          </script>
+         <script src="./js/change-language.js"></script>
          <script>
              window.cookieconsent.initialise({
                  "palette": {
